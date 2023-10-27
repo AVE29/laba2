@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>История веба - WWW</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+
+  <script type="text/javascript">
+    document.write("Дата последнего изменения документа: "+document.lastModified);
+
+    function printDataBrowserWrite(){
+      document.write("Кодовое имя браузера: "+navigator.appCodeName+"<br>Официальное имя браузера: "+navigator.appName+
+      "<br>Версия браузера: "+navigator.appVersion+"<br>Платформа: "+navigator.platform)
+    }
+    function printUsernameAddressDoc(){
+      window.alert("Имя пользователя: Vadikkk"+"\nАдрес документа: "+location.href)
+    }
+    function printScreenData(){
+      if(window.confirm("Ширина экрана: "+screen.width+"\nВысота экрана: "+screen.height+"\nГлубина цвета: "+screen.colorDepth))
+        document.write("Ширина экрана: "+screen.width+"<br>Высота экрана: "+screen.height+"<br>Глубина цвета: "+screen.colorDepth);
+    }
+
+    function hidePic13(){
+
+        pic1.style.visibility='hidden'
+        pic3.style.visibility='hidden'
+    }
+    function showPic13(){
+      pic1.style.visibility='visible'
+      pic3.style.visibility='visible'
+    }
+    function swapZIndex() {
+      var zIndex1 = parseInt(firstimg.style.zIndex);
+      var zIndex2 = parseInt(secondimg.style.zIndex);
+
+      firstimg.style.zIndex = zIndex2; 
+      secondimg.style.zIndex = zIndex1; 
+      thirdimg.style.zIndex = zIndex2;
+
+    }
+  </script>
+
+  
+</head>
+<body>
+
+&nbsp;<div class="text">
+
+      <h1>Интересные факты про Лабрадоров</h1>
+        <p>Лабрадоры известны своей дружелюбностью и прекрасно подходят в качестве нянек для детей. Они обладают терпением и ласковым характером, что делает их отличными компаньонами для малышей.</p>
+  
+        </details>&nbsp;<h2>Лабрадоры-терапевты: Благодаря своей дружелюбности и интеллекту, лабрадоры часто используются в качестве собак-терапевтов. Они помогают людям с физическими и эмоциональными проблемами, а также работают в больницах и специальных учреждениях</h2>
+          <p class="news" onmouseover="this.className='task91'" onmouseout="this.className='news'">Шерсть лабрадоров покрыта специальным составом из желез собаки, который отталкивает воду.</p>
+          <p class="news" onmouseover="this.className='task92'" onmouseout="this.className='news'">Хвост лабрадора также помогает им в воде. Он похож на хвост выдры, и используется как рулевой механизм.</p>
+</div>
+
+
+  <!-- <div style="position: absolute; top:20; left:30; width: 20; height: 150;background: lime;">
+    Это слой с текстом на зеленом фоне, помещенным в прямоугольную область 150 х 150 (основной).</div>
+  <div style="position: absolute;top:100;left: 30; z-index: 0;"></div> -->
+
+
+<div class="menu">
+<form name="f0">
+  <input type="button" value="Window" name="b0">
+  </form>
+  <form name="f1">
+  <input type="button" value="Navigator" onclick="printDataBrowserWrite();" name="b1">
+  </form>
+  <form name="f2">
+    <input type="button" value="Location" onclick="printUsernameAddressDoc();" name="b2">
+  </form>
+  <form name="f4">
+    <input type="button" value="Screen" onclick="printScreenData();" name="b3">
+  </form>
+</div>
+<div id="firstimg" style="position: absolute; top: 40%;left: 5%;z-index:0;">
+  <img  src="Labr.png" name="pic1" >
+</div>
+
+<div id="secondimg" style="position: absolute; top: 40%;left: 15%;z-index:1;">
+  <img src="Labr.png" name="pic2" >
+</div>
+<div id="thirdimg" style="position: absolute; top: 40%;left: 25%;z-index:0;">
+  <img src="Labr.png" name="pic3" >
+</div>
+
+  
+  <form style="position: absolute; top: 71%;left: 5%;" name="fb1">
+    <input type="button"  value="HideCentrePic" onclick="hidePic13()" name="butt1">
+  </form>
+  <form  style="position: absolute; top: 71%;left: 15%" name="fb2">
+    <input type="button"  value="ShowCentrePic" onclick="showPic13()" name="butt2">
+  </form>
+  <form  style="position: absolute; top: 71%;left: 25%;" onclick="swapZIndex()" name="fb3">
+    <input type="button"  value="WhatIsIt?" name="butt3">
+  </form>
+ 
+<div class="container">
+    <table>
+      <tr>
+        <th>Заголовок 1</th>
+        <th>Заголовок 2</th>
+      </tr>
+      <tr>
+        <td class="highlight-cell">Ячейка 1</td>
+        <td class="highlight-cell">Ячейка 2</td>
+      </tr>
+      <tr>
+        <td class="highlight-cell">Ячейка 3</td>
+        <td class="highlight-cell">Ячейка 4</td>
+      </tr>
+    </table>
+</div>
+
+</body>
+</html>
